@@ -1,0 +1,85 @@
+*
+    margin: 0px
+    padding: 0px
+
+body
+    background-color: #1C1C1E
+    color: white
+    .container
+        margin: 20px
+        display: grid
+        grid-template-rows: 100px 1fr
+        row-gap: 20px
+
+        .search__container
+            display: grid
+            grid-template-columns: 1fr 1fr
+            @media (max-width: 720px)
+                justify-items: center
+                grid-template-columns: 1fr
+            @media (max-width: 415px)
+                justify-items: center
+                grid-template-columns: 1fr
+
+            h1
+                display: grid
+                letter-spacing: 2.5px
+                align-content: center
+                color: #EED96E
+                @media (max-width: 415px)
+                    font-size: 27px
+
+            .search__block
+                display: grid
+                column-gap: 20px
+                justify-content: end
+                align-content: center
+                grid-auto-flow: column
+                input
+                    color: #EED96E
+                    padding-left: 10px
+                    width: 355px
+                    height: 23px
+                    border: 1px solid #EED96E
+                    outline: none
+                    background: none
+                    @media (max-width: 415px)
+                        width: 300px
+
+        .posts
+            display: grid
+            gap: 40px
+            justify-items: center
+            grid-template-columns: repeat(auto-fit , minmax(310px , 1fr))
+            @media (max-width: 415px)
+                justify-items: center
+            .content
+                display: grid
+                grid-auto-flow: column
+                border: 1px solid white
+                padding: 20px
+                column-gap: 20px
+
+                img
+                    width: 200px
+                    height: 250px
+                    @media (max-width: 415px)
+                        width: 150px
+                        height: 200px
+
+                .characters
+                    display: grid
+                    grid-template-rows: repeat(3 , 60px)
+                    @media (max-width: 415px)
+                        grid-template-rows: auto
+                    .subdiv
+                        display: grid
+                        align-content: center
+                        label
+                            color: #EED96E
+                    #link__block
+                        display: grid
+                        align-content: center
+                        a
+                            text-decoration: none
+                            color: #EED96E
